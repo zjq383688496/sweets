@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+// 引入全局方法
+@import "global.less";
+
+// layout
+.layout,
+.container {
+	.ma;
+	.clearfix;
+}
+.header,
+.footer,
+.layout {		// 100%
+	.w(@layout);
+}
+.container {	// 1000px
+	.w(@container);
+}
+
+// header
+.header {
+	.h(56);
+	.bc(@white);
+	.borb(3px solid @gray-side);
+	.bs;
+	.header-con {
+		.posr;
+		.wh(1000; 56);
+		.ma;
+		.borb(3px solid @gray-side);
+		.bs;
+	}
+	.header-nav {
+		.fr;
+		.borr(1px solid @gray-side);
+		.oh;
+		li {
+			.fl;
+			.db;
+			.wh(132, 53);
+			.lh(60);
+			.borb(3px solid @tran);
+			.borl(1px solid @gray-side);
+			.tc;
+			&:hover {
+				.borb(3px solid @orange-side);
+			}
+		}
+	}
+	.logo {
+		.posa;
+		background: url(../image/logo.png) no-repeat;
+		top: 2px;
+		left: 38px;
+		.squ(101);
+	}
+}
+
+// footer
+.footer {
+	
+}
+
