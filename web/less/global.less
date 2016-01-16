@@ -16,12 +16,17 @@
 body {
 	font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
 	color: @gray-dark;
+	.bc(@orange);
 }
 ul, li {
 	list-style: none
 }
 a, a:hover {
 	text-decoration: none;
+}
+a:active,
+a:focus {
+	outline: none;
 }
 img {
 	.db;
