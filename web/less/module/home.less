@@ -1,0 +1,126 @@
+//
+// Home
+// --------------------------------------------------
+
+// 甜
+.img-sweetness {
+	background: url(../image/img-sweetness.jpg) no-repeat;
+}
+.img-sweetness-2 {
+	background: url(../image/img-sweetness-2.jpg) no-repeat;
+}
+.img-sweetness-CN {
+	background: url(../image/img-sweetness-CN.png) no-repeat;
+}
+.img-sweetness-EN {
+	background: url(../image/img-sweetness-EN.png) no-repeat;
+}
+// 香
+.img-aroma {
+	background: url(../image/img-aroma.jpg) no-repeat;
+}
+.img-aroma-2 {
+	background: url(../image/img-aroma-2.jpg) no-repeat;
+}
+.img-aroma-CN {
+	background: url(../image/img-aroma-CN.png) no-repeat;
+}
+.img-aroma-EN {
+	background: url(../image/img-aroma-EN.png) no-repeat;
+}
+// 苦
+.img-bitterness {
+	background: url(../image/img-bitterness.jpg) no-repeat;
+}
+.img-bitterness-2 {
+	background: url(../image/img-bitterness-2.jpg) no-repeat;
+}
+.img-bitterness-CN {
+	background: url(../image/img-bitterness-CN.png) no-repeat;
+}
+.img-bitterness-EN {
+	background: url(../image/img-bitterness-EN.png) no-repeat;
+}
+// 醇
+.img-mellowness {
+	background: url(../image/img-mellowness.jpg) no-repeat;
+}
+.img-mellowness-2 {
+	background: url(../image/img-mellowness-2.jpg) no-repeat;
+}
+.img-mellowness-CN {
+	background: url(../image/img-mellowness-CN.png) no-repeat;
+}
+.img-mellowness-EN {
+	background: url(../image/img-mellowness-EN.png) no-repeat;
+}
+
+
+.home-banner {
+	ul {
+		.w(848);
+		.ma;
+		.oh;
+	}
+	li {
+		.fl;
+		.db;
+		.wh(212; 490);
+		&.hb-1,
+		&.hb-3 {
+			.mt(37);
+		}
+	}
+	.img {
+		.wh(210; 243);
+		.mb(2);
+		.oh;
+	}
+	.hb-list {
+		.hb-child-1,
+		.hb-child-2 {
+			.wh(210; 243);
+		}
+		.hb-child-2 {
+			display: none;
+			a.more {
+				.fl;
+				.wh(100%; 24);
+				.lh(24);
+				.mt(22);
+				.fz(14);
+				.tc;
+				color: @white;
+			}
+		}
+		.brand-list {
+			.fl;
+			.wh(178px; 172);
+			.ml(19);
+			.mt(17);
+			.oh;
+			a {
+				.fl;
+				.whb(84; 37);
+				.mr(5);
+				.mb(6);
+				.bc(@dark);
+				opacity: .7;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			img {
+				.whb(84; 37);
+			}
+		}
+		&:hover {
+			.hb-child-1 {
+				display: none;
+			}
+			.hb-child-2 {
+				.db;
+			}
+		}
+	}
+}

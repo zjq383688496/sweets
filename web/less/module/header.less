@@ -1,0 +1,55 @@
+//
+// Header
+// --------------------------------------------------
+
+.header {
+	.h(56);
+	.bc(@white);
+	.borb(3px solid @gray-side);
+	.bs;
+	.header-con {
+		.posr;
+		.wh(1000; 56);
+		.ma;
+		.borb(3px solid @gray-side);
+		.bs;
+	}
+	.header-nav {
+		.fr;
+		.borr(1px solid @gray-side);
+		.oh;
+		li {
+			.fl;
+			.db;
+			.wh(132, 53);
+			.lh(60);
+			.borb(3px solid @tran);
+			.borl(1px solid @gray-side);
+			.tc;
+			.fz(14);
+			i {
+				.dib;
+				.squ(12);
+				.ml(4);
+				background: url(../image/icon.png) no-repeat;
+			}
+			&:hover {
+				color: @orange;
+				.borb(3px solid @orange-side);
+				i {
+					.bp(0 -50px);
+				}
+			}
+			&.s-active {
+				.borb(3px solid @orange-side);
+			}
+		}
+	}
+	.logo {
+		.posa;
+		background: url(../image/logo.png) no-repeat;
+		top: 2px;
+		left: 38px;
+		.squ(101);
+	}
+}
