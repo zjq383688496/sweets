@@ -33,16 +33,21 @@
 				.ml(4);
 				background: url(../image/icon.png) no-repeat;
 			}
-			&:hover {
-				color: @orange;
+			&:hover,
+			&.s-active,
+			&.s-select {
 				.borb(3px solid @orange-side);
+			}
+			&.s-select {
+				color: @orange;
 				i {
 					.bp(0 -50px);
 				}
 			}
-			&.s-active {
-				.borb(3px solid @orange-side);
-			}
+		}
+		.nav-brand,
+		.nav-search {
+			.posr;
 		}
 	}
 	.logo {
