@@ -22,3 +22,32 @@
 .wrapper {
 	.p(60px 44px);
 }
+
+.show-template {
+	.wh(@layout; 453);
+	.bc(@white);
+	.oh;
+	.st-left {
+		.fl;
+		.wh(212; @layout);
+		.borr(1px solid @grayB);
+		background: url(../image/logo_opacity.png) 13px 197px @grayE no-repeat;
+	}
+	.st-right {
+		.fr;
+		.wh(663; @layout);
+		.p(0 18px);
+	}
+}
+
+.e-title {
+	.wh(@layout; 20);
+	.lh(20);
+	color: @orange;
+	.fz(14);
+}
+.e-child {
+	.pl(14);
+	background: url(../image/icon.png) -70px -145px no-repeat;
+	.oh;
+}
