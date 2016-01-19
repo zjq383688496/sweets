@@ -3,23 +3,32 @@ $(function () {
 
 	// flexslider配置
 	var fs_options = {
-		// 首页底部
-		footer: {
+		def: {
 			animation: 'slide',
 			animationLoop: false,
 			slideshow: false,
-			itemWidth: 132,
-			maxItems: 7,
 			controlNav: false
 		},
+		// 首页底部
+		footer: function () {
+			var that = this.def;
+			that.itemWidth = 132;
+			that.maxItems  = 7;
+			return that;
+		},
 		// 品牌列表
-		brands: {
-			animation: 'slide',
-			animationLoop: false,
-			slideshow: false,
-			itemWidth: 184,
-			maxItems: 5,
-			controlNav: false
+		brands: function () {
+			var that = this.def;
+			that.itemWidth = 184;
+			that.maxItems  = 5;
+			return that;
+		},
+		// 商品列表
+		products: function () {
+			var that = this.def;
+			that.itemWidth = 70;
+			that.maxItems  = 9;
+			return that;
 		}
 	}
 	if (!window.headerFn) window.headerFn = {};
@@ -66,11 +75,12 @@ $(function () {
 			show: function (dom, name) {
 				var parent = dom.parent();
 				if (!parent.find('.dialog-mask-close').length) {
-					parent.append('<div class="dialog-mask-close" data-hide="'+name+'" onclick="headerFn.ui.close(this);"></div>');
+					parent.append('<div class="dialog-mask-close" data-hide="'+name+'" onclick="headerFn.ui.close(this, event);"></div>');
 				}
 				dom.show();
 			},
 			close: function (obj, e) {
+				var e = e || window.event;
 				headerFn.stopEvent(e);
 				var attr = $(obj).attr('data-hide');
 				var dom  = $(attr);
@@ -80,7 +90,6 @@ $(function () {
 		},
 		// 阻止默认事件
 		stopEvent: function (e) {
-			var e = e || window.event;
 			if ( e.stopPropagation ) {
 				e.stopPropagation();
 			} else {
@@ -94,7 +103,7 @@ $(function () {
 				headerFn.$flexslider.each(function (i, e) {
 					var dom     = $(e);
 					var attr    = dom.attr('data-options');
-					var options = fs_options[attr];
+					var options = typeof(fs_options[attr]) === 'function'? fs_options[attr](): '';
 					if (options) dom.flexslider(options);
 				});
 			}

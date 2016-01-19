@@ -2,7 +2,7 @@
 // Brand Info
 // --------------------------------------------------
 
-.bread-info {
+.brand-info {
 	.bi-top {
 		.wh(100%; 67);
 		.mt(28);
@@ -12,9 +12,13 @@
 			.fl;
 			.whb(142; 65);
 			.bor(1px solid @gray-high);
+			.pc-1;
+			span {
+				.pc-2;
+			}
 		}
 		img {
-			.squ(100%);
+			.pc-3;
 		}
 		ul {
 			.fl;
@@ -33,9 +37,72 @@
 		}
 	}
 	.bi-introduction {
-		
+		.mt(10);
+		.oh;
+	}
+	.bi-text {
+		.wh(100%; 140);
+		//.pr(30);
+		.lh(20);
+		.fz(12);
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 	.bi-product {
-		
+		.mt(20);
+	}
+	.bi-product-bar {
+		.posr;
+		.wh(@layout; 60);
+		.p(17px 0);
+		.ma;
+		.mt(6);
+		.bc(@gray-high);
+		.list {
+			.w(630);
+			.ma;
+		}
+		.flex-viewport {
+			.h(60);
+			.oh;
+		}
+		ul.slides {
+			.whb(630; 60);
+			li {
+				.fl;
+				.db;
+				.whb(70; 60);
+				a {
+					.db;
+					.squ(60);
+					.m(0 5px);
+					.bc(#000);
+				}
+				img {
+					.squ(60);
+				}
+			}
+		}
+		.flex-direction-nav {
+
+		}
+		a.flex-prev,
+		a.flex-next {
+			.posa;
+			top: 40px;
+			.db;
+			.squ(15);
+			.oh;
+			text-indent: 1000px;
+			background: url(../image/icon.png) no-repeat;
+		}
+		a.flex-prev {
+			left: 2px;
+			background-position: -36px -119px;
+		}
+		a.flex-next {
+			right: 2px;
+			background-position: -36px -159px;
+		}
 	}
 }

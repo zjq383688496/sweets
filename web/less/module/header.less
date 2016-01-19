@@ -4,7 +4,8 @@
 
 .header .header-nav li i,
 .header .btn-search,
-.bread-line dl.list i {
+.bread-line dl.list i,
+.header .country a {
 	background: url(../image/icon.png) no-repeat;
 }
 .header {
@@ -97,12 +98,20 @@
 			.wh(100%; 130);
 			.p(10px 18px 0);
 			.bs;
-			a {
-				.db;
+			div.li {
 				.wh(100%; 35);
-				.lh(24);
 				.mb(4);
-				.bc(@dark);
+			}
+			a {
+				.pc-1;
+				.wh(94; 35);
+				.lh(24);
+				s {
+					.pc-2;
+				}
+				img {
+					.pc-3;
+				}
 			}
 		}
 		dd.more {
@@ -147,6 +156,23 @@
 		top: 2px;
 		left: 38px;
 		.squ(101);
+	}
+	.country {
+		.posa;
+		top: 14px;
+		left: 101%;
+		a {
+			.db;
+			.wh(20; 13);
+			.mb(2);
+			cursor: pointer;
+		}
+		a.c-en {
+			.bp(-70px -200px);
+		}
+		a.c-zh {
+			.bp(-70px -230px);
+		}
 	}
 }
 
