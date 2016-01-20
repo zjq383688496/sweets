@@ -42,10 +42,8 @@
 			&:hover,
 			&.s-active,
 			&.s-select {
-				.borb(3px solid @orange-side);
-			}
-			&.s-select {
 				color: @orange;
+				.borb(3px solid @orange-side);
 				i {
 					.bp(0 -50px);
 				}
@@ -65,10 +63,9 @@
 	}
 	// 品牌列表
 	.nb-box {
-		left: -1px;
-		.wh(541; 196);
-		.pt(10);
-		.pl(1);
+		left: -136px;
+		.wh(675; 196);
+		.p(10px 1px 0);
 		.bc(@gray-side);
 		.oh;
 		dl {
@@ -98,20 +95,11 @@
 			.wh(100%; 130);
 			.p(10px 18px 0);
 			.bs;
-			div.li {
-				.wh(100%; 35);
-				.mb(4);
-			}
 			a {
-				.pc-1;
 				.wh(94; 35);
 				.lh(24);
-				s {
-					.pc-2;
-				}
-				img {
-					.pc-3;
-				}
+				.mb(4);
+				.pc;
 			}
 		}
 		dd.more {

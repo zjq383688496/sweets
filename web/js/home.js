@@ -35,6 +35,8 @@ $(function () {
 	window.headerFn = {
 		// 初始化
 		init: function () {
+			// 导航
+			this.$nav       = $('.header-nav>li');
 			// 品牌
 			this.$brandBtn  = $('#navBrand');
 			this.$brandBox  = $('.nb-box');
@@ -77,6 +79,7 @@ $(function () {
 				if (!parent.find('.dialog-mask-close').length) {
 					parent.append('<div class="dialog-mask-close" data-hide="'+name+'" onclick="headerFn.ui.close(this, event);"></div>');
 				}
+				dom.parent().addClass('s-active');
 				dom.show();
 			},
 			close: function (obj, e) {
@@ -86,6 +89,7 @@ $(function () {
 				var dom  = $(attr);
 				dom.hide();
 				$(obj).remove();
+				headerFn.$nav.removeClass('s-active');
 			}
 		},
 		// 阻止默认事件
@@ -110,24 +114,4 @@ $(function () {
 		}
 	}
 	headerFn.init();
-	/*$('.flexslider').flexslider({
-		animation: "slide",
-		animationLoop: false,
-		slideshow: false,
-		itemWidth: 132,
-		itemMargin: 0,
-		minItems: 1,
-		maxItems: 7,
-		controlNav: false
-		//directionNav: false
-		// pausePlay: true
-	});*/
-	/*$('.flexslider').flexslider({
-		animation: 'slide',
-		animationLoop: false,
-		slideshow: false,
-		itemWidth: 184,
-		maxItems: 5,
-		controlNav: false
-	});*/
 });
