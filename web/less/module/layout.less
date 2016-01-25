@@ -54,12 +54,12 @@
 
 
 // Pad
-@media only screen and (min-width: 700px) and (max-width: 1024px){
+@media only screen and (min-width: 480px) and (max-width: 1024px){
 
 }
 
 // Phone
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
 	.header,
 	.footer,
 	.layout,
@@ -72,11 +72,29 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 	.wrapper {
 		.p(0 7%);
 	}
 	.bg-common {
 		background: none @orange;
+	}
+	.show-template {
+		height: auto;
+		.bc(@white);
+		.oh;
+		.st-left {
+			.w(0);
+			.borr(0);
+			background: url(../image/logo_opacity.png) 13px 197px @grayE no-repeat;
+		}
+		.st-right {
+			.fr;
+			.wh(@layout; @layout);
+			.bs;
+			.p(0);
+		}
 	}
 }

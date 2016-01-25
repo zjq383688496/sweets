@@ -38,3 +38,47 @@
 		}
 	}
 }
+
+// Phone
+@media only screen and (max-width: 480px) {
+	.company-info {
+		.bc(@white);
+		.ci-introduction {
+			.mt(0);
+			.oh;
+			.e-title {
+				.h(80);
+				.lh(120);
+				.bs;
+				.borb(1px solid @grayB);
+				.p(0 10px);
+				background: url(../image/logo_opacity.png) 80% center @grayE no-repeat;
+				background-size: 32%;
+			}
+		}
+		.ci-text {
+			height: auto;
+			.p(0 10px);
+			.bs;
+		}
+		.bi-image {
+			.mt(20);
+		}
+		.bi-image-list {
+			.p(0 0 0 10px);
+			height: auto;
+			.bs;
+			a,
+			img {
+				.fl;
+				.whb(42%; 100);
+				.mr(10);
+				.mb(10);
+			}
+			a>img {
+				.w(100%);
+				.mr;
+			}
+		}
+	}
+}

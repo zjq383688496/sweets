@@ -1,3 +1,55 @@
+/* jQuery方法扩展: $.browser/$.fn */
+(function($) {
+	if (!$) return;
+	// $.browser方法扩展
+	var ua = navigator.userAgent.toLowerCase();
+	if (!$.browser) {
+		$.browser = {
+			version: (ua.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0,'0'])[1],
+			safari: /webkit/.test(ua),
+			opera: /opera/.test(ua),			
+			mozilla: /mozilla/.test(ua) && !/(compatible|webkit)/.test(ua)
+		};
+	}
+	// 增加了IE11的判断
+	$.extend($.browser, {
+		isIE6: ($.browser.msie && $.browser.version == 6) ? true: false,
+		IEMode: (function() {
+			if ($.browser.msie) {
+				if (document.documentMode) {
+					// >=IE8
+					return document.documentMode;
+				}
+				if (document.compatMode && document.compatMode == 'CSS1Compat') {
+					return 7;
+				}
+				// quirks mode
+				return 5;
+			}
+			return 0;
+		})(),
+		isIPad: (/ipad/i).test(ua),
+		isAndroid: (/android/i).test(ua),
+		isIPhone: (/iphone/i).test(ua),
+		isSymbian: (/symbianos/i).test(ua),
+		isIPod: (/ipod/i).test(ua),
+		isWin: (/windows/i).test(ua),
+		isMac: (/mac os x/i).test(ua),
+		isLinux: (/linux/i).test(ua),
+		isWechat: (/micromessenger/i).test(ua),
+		isPC: function () {
+			var Agents = ['android', 'iphone', 'symbianos', 'windows phone', 'ipad', 'ipod'];
+			var flag = true;
+			for (var i = 0; i < Agents.length; i++) {
+			   if (ua.indexOf(Agents[i]) > 0) { flag = false; break; }
+			}
+			return flag;
+		},
+		isMobile: function () {
+			return (!this.isPC());
+		}
+	});
+})(jQuery);
 $(function () {
 	/* header */
 
@@ -7,7 +59,8 @@ $(function () {
 			animation: 'slide',
 			animationLoop: false,
 			slideshow: false,
-			controlNav: false
+			controlNav: false,
+			move: 1
 		},
 		// 首页底部
 		footer: function () {
@@ -26,8 +79,9 @@ $(function () {
 		// 商品列表
 		products: function () {
 			var that = this.def;
-			that.itemWidth = 70;
-			that.maxItems  = 9;
+			that.itemWidth = $.browser.isMobile()? 60: 70;
+			that.maxItems  = $.browser.isMobile()? 4: 9;
+			that.move = $.browser.isMobile()? 0: 1;
 			return that;
 		}
 	}
@@ -108,7 +162,7 @@ $(function () {
 					var dom     = $(e);
 					var attr    = dom.attr('data-options');
 					var options = typeof(fs_options[attr]) === 'function'? fs_options[attr](): '';
-					if (options) dom.flexslider(options);
+					if (options && !(attr=='brands' && $.browser.isMobile())) dom.flexslider(options);
 				});
 			}
 		}

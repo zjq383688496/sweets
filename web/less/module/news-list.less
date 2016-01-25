@@ -16,9 +16,9 @@
 		.img {
 			.fl;
 			.wh(170; 100%);
-			.bc(@dark);
 			.tc;
 			.lh(100%);
+			.pc;
 		}
 		.info {
 			.fl;
@@ -100,6 +100,63 @@
 				.ml(6);
 				.bp(0 -230px);
 			}
+		}
+	}
+}
+
+// Phone
+@media only screen and (max-width: 480px) {
+	.show-template {
+		.bc(@tran);
+	}
+	.news-list {
+		.nl-ul {
+			height: auto;
+		}
+		li {
+			.h(100);
+			.p(5px);
+			.borb;
+			.mb(6);
+			.oh;
+			.bc(@white);
+			.img {
+				.wh(30%; 100%);
+				.bc(@grayE);
+			}
+			.info {
+				.wh(70%; 100%);
+				.pl(16);
+				.mt(0);
+				.bs;
+			}
+			.e-title {
+				.th(32);
+				span {
+					.fl;
+					.mr(10);
+					max-width: 80px;
+					.oh;
+				}
+				a {
+					.posr;
+					.w(10);
+					text-indent: 1000px;
+					.bc(@tran);
+					i {
+						.posa;
+						top: 2px;
+						right: 4px;
+						.squ(12);
+						.mt(0);
+						.ml(0);
+						background: url(../image/icon.png) -40px -230px no-repeat;
+					}
+				}
+			}
+		}
+		.nl-btn {
+			display: none;
 		}
 	}
 }

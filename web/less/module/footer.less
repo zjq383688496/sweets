@@ -81,7 +81,8 @@
 			.fz(14);
 			color: @orange;
 		}
-		a {
+		a,
+		span {
 			.fl;
 			.db;
 			.th(20);
@@ -90,9 +91,14 @@
 			color: @gray6;
 			background: url(../image/icon.png) -70px -145px no-repeat;
 			clear: both;
+		}
+		a {
 			&:hover {
 				color: @orange;
 			}
+		}
+		span {
+			cursor: default;
 		}
 		dl {
 			.fl;

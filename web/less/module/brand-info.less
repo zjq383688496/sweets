@@ -100,3 +100,94 @@
 		}
 	}
 }
+
+// Phone
+@media only screen and (max-width: 480px) {
+	.brand-info {
+		.bc(@white);
+		.bi-top {
+			.wh(100%; 100);
+			.mt(0);
+			.pb(0);
+			.bc(@grayE);
+			.borb(1px solid @grayB);
+			i {
+				.fl;
+				.whb(40%; 100);
+				background-position: center;
+				background-size: cover;
+			}
+			.logo {
+				.fl;
+				.ml(10);
+				.bc(@tran);
+				.whb(100; 40);
+			}
+			ul {
+				.fl;
+				.w(53%);
+				.pt(8);
+				.ml(10);
+				.bort(1px solid @grayB);
+			}
+			li {
+				.db;
+			}
+			li.e-title {
+				display: none;
+			}
+			li.e-child {
+				.fl;
+				.fz(12);
+				.th(20);
+				.ml(0);
+				color: @gray-light;
+				clear: both;
+			}
+		}
+		.bi-introduction {
+			.p(0 10px);
+		}
+		.bi-text {
+			height: auto;
+		}
+		.bi-product {
+			.p(0 10px);
+		}
+		.bi-product-bar {
+			.wh(@layout; 50);
+			.bc(@gray-high);
+			.list {
+				.w(90%);
+			}
+			.flex-viewport {
+				.h(50);
+			}
+			ul.slides {
+				.whb(100%; 50);
+				li {
+					.whb(25%; 50);
+					a {
+						.squ(50);
+						.ma;
+					}
+					img {
+						.squ(100%);
+					}
+				}
+			}
+			.flex-direction-nav {
+
+			}
+			a.flex-prev,
+			a.flex-next {
+			}
+			a.flex-prev {
+				left: 0;
+			}
+			a.flex-next {
+				right: 0;
+			}
+		}
+	}
+}
