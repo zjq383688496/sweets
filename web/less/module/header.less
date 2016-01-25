@@ -34,6 +34,9 @@
 			.borl(1px solid @gray-side);
 			.tc;
 			.fz(14);
+			a {
+				color: @gray-light;
+			}
 			i {
 				.dib;
 				.squ(12);
@@ -42,7 +45,9 @@
 			&:hover,
 			&.s-active,
 			&.s-select {
-				color: @orange;
+				a {
+					color: @orange;
+				}
 				.borb(3px solid @orange-side);
 				i {
 					.bp(0 -50px);
