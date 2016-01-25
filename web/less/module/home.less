@@ -105,13 +105,11 @@
 				.mr(5);
 				.mb(6);
 				.bc(@dark);
+				.pc;
 				opacity: .7;
 				&:hover {
 					opacity: 1;
 				}
-			}
-			img {
-				.whb(84; 37);
 			}
 		}
 		&:hover {
@@ -120,6 +118,77 @@
 			}
 			.hb-child-2 {
 				.db;
+			}
+		}
+	}
+}
+
+// Phone
+@media only screen and (max-width: 700px) {
+	.home-banner {
+		ul {
+			.w(100%);
+			.oh;
+		}
+		li {
+			.wh(100%; 114);
+			.mb(2);
+			&.hb-1,
+			&.hb-3 {
+				.mt(0);
+			}
+			.img {
+				.fr;
+				.wh(50%; 114);
+				.bs;
+				.oh;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+		.hb-list {
+			.hb-child-1,
+			.hb-child-2 {
+				.wh(210; 243);
+			}
+			.hb-child-2 {
+				display: none;
+				a.more {
+					.fl;
+					.wh(100%; 24);
+					.lh(24);
+					.mt(22);
+					.fz(14);
+					.tc;
+					color: @white;
+				}
+			}
+			.brand-list {
+				.fl;
+				.wh(178px; 172);
+				.ml(19);
+				.mt(17);
+				.oh;
+				a {
+					.fl;
+					.whb(84; 37);
+					.mr(5);
+					.mb(6);
+					.bc(@dark);
+					.pc;
+					opacity: .7;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+			&:hover {
+				.hb-child-1 {
+					display: none;
+				}
+				.hb-child-2 {
+					.db;
+				}
 			}
 		}
 	}

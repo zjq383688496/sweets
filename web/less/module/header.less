@@ -49,6 +49,13 @@
 				}
 			}
 		}
+		#navBrand, 
+		#navSearch {
+			&.s-active,
+			&.s-select {
+				.bc(@gray-side);
+			}
+		}
 	}
 	.nav-brand,
 	.nav-search {
@@ -252,4 +259,19 @@
 	z-index: 2;
 	.squ(100%);
 	opacity: 0;
+}
+
+// Pad
+@media only screen and (min-width: 700px) and (max-width: 1024px){
+
+}
+
+// Phone
+@media only screen and (max-width: 700px) {
+	.header {
+		.posa;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
 }
