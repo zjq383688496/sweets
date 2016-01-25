@@ -94,6 +94,9 @@ $(function () {
 			// 品牌
 			this.$brandBtn  = $('#navBrand');
 			this.$brandBox  = $('.nb-box');
+			// 移动列表
+			this.$mobileBtn = $('#mobileList');
+			this.$mobileBox = $('.ml-box');
 			// 搜索
 			this.$searchBtn = $('#navSearch');
 			this.$searchBox = $('.ns-box');
@@ -116,6 +119,10 @@ $(function () {
 			// 品牌展开||隐藏
 			this.$brandBtn.bind('click', function () {
 				that.ui.show(that.$brandBox, '.nb-box');
+			});
+			// 移动列表展开||隐藏
+			this.$mobileBtn.bind('click', function () {
+				that.ui.show(that.$mobileBox, '.ml-box');
 			});
 			// 搜索展开||隐藏
 			this.$searchBtn.bind('click', function () {

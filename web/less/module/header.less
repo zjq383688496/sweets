@@ -56,10 +56,16 @@
 				.bc(@gray-side);
 			}
 		}
+		#mobileList {
+			display: none;
+		}
 	}
 	.nav-brand,
 	.nav-search {
 		.posr;
+	}
+	.ml-box {
+		display: none;
 	}
 	.nb-box,
 	.ns-box {
@@ -273,6 +279,183 @@
 		top: 0;
 		right: 0;
 		left: 0;
+		.h(50);
+		.header-con {
+			.posr;
+			.wh(100%; 50);
+			.ma;
+			.borb(3px solid @gray-side);
+			.bs;
+		}
+		.header-nav {
+			.wh(153; 50);
+			li {
+				.wh(50; 47);
+				&:hover,
+				&.s-active,
+				&.s-select {
+					.borb(3px solid @tran);
+					i {
+						.bp(0 -50px);
+					}
+				}
+			}
+			.li-1,
+			.li-2,
+			.li-3 {
+				display: none;
+			}
+			.li-0,
+			.li-4,
+			.li-5 {
+				&>a {
+					.db;
+					.squ(32);
+					.oh;
+					.mt(9);
+					.ml(9);
+					text-indent: 1000px;
+					background: url(../image/icon.png) no-repeat;
+				}
+			}
+			.li-0>a {
+				background-position: 0 -260px;
+			}
+			.li-4>a {
+				background-position: 0 -300px;
+			}
+			.li-5>a {
+				background-position: 0 -340px;
+			}
+			#mobileList {
+				.db;
+			}
+		}
+		.nb-box,
+		.ns-box {
+			top: 50px;
+		}
+		// 搜索
+		.ns-box {
+			right: 0;
+			.w(200);
+		}
+		// 品牌列表
+		.ml-box {
+			.posa;
+			top: 50px;
+			right: 0;
+			z-index: 3;
+			.w(160);
+			.p(2px 0 0);
+			.bc(@gray-side);
+			.oh;
+			dl {
+				.fl;
+				.db;
+				.squ(100%);
+				.oh;
+				.bc(@white);
+				&.last {
+					.borr;
+				}
+				a {
+					.db;
+				}
+			}
+			dt {
+				.fl;
+				.w(100%);
+				.db;
+				.mt(3);
+				.th(24);
+				.bc(@grayC);
+				a {
+					.db;
+					.wh(100%; 24);
+					.lh(24);
+					.bc(@grayC);
+					color: @orange;
+				}
+				&.first {
+					.mt;
+				}
+			}
+			dd {
+				.fl;
+				.w(100%);
+				.db;
+			}
+			dd.list {
+				.w(100%);
+				.lh(24);
+				.p(0 10px);
+				.bs;
+				.bc(@gray-highlight);
+				a {
+					.w(100%);
+					.th(24);
+					.mt(-1);
+					color: @gray-light;
+					.bort(1px solid @grayC);
+				}
+			}
+			dd.list-icon {
+				.lh(24);
+				.p(10px 0);
+				.bc(@gray-highlight);
+				.oh;
+				p {
+					color: @gray-light;
+				}
+				a {
+					.fl;
+					.squ(24);
+					.p(0);
+					clear: none;
+					.ml(6);
+					background: url(../image/icon.png) no-repeat;
+				}
+				a.icon-taobao {
+					.bp(-70px 0);
+				}
+				a.icon-sina {
+					.bp(-70px -30px);
+				}
+				a.icon-tt {
+					.bp(-70px -60px);
+				}
+				a.icon-qq {
+					.bp(-70px -90px);
+				}
+				a.icon-wechat {
+					.bp(-70px -120px);
+				}
+			}
+			dd.list-country {
+				.lh(24);
+				.tc;
+				.oh;
+				.bc(@gray-highlight);
+				a {
+					.dib;
+					.wh(20; 13);
+					cursor: pointer;
+					background: url(../image/icon.png) no-repeat;
+				}
+				a.c-en {
+					.bp(-70px -200px);
+				}
+				a.c-zh {
+					.bp(-70px -230px);
+				}
+			}
+		}
+		.logo {
+			background-size: 80px;
+			top: 6px;
+			.squ(80);
+		}
 	}
 	.bread-line {
 		.mt(40);
