@@ -143,7 +143,78 @@
 
 // Pad
 @media only screen and (min-width: 400px) and (max-width: 1024px){
-
+	.home-banner {
+		ul {
+			.w(100%);
+		}
+		li {
+			.w(25%);
+		}
+		.img {
+			.w(99%);
+		}
+		.hb-list {
+			.posr;
+			.hb-child-1,
+			.hb-child-2 {
+				.w(100%);
+				i {
+					.db;
+					.squ(100%);
+					.bor(1px solid @white);
+					.bs;
+				}
+			}
+			.hb-child-2 {
+				a.more {
+					.posa;
+					left: 50%;
+					bottom: 10px;
+					.ml(-36);
+					.wh(72; 24);
+					.lh(24);
+					.fz(14);
+					.tc;
+					.bc(@white);
+					color: @orange;
+				}
+			}
+			.brand-list {
+				display: none;
+				.fl;
+				.wh(178px; 172);
+				.ml(19);
+				.mt(17);
+				.oh;
+				a {
+					.fl;
+					.whb(84; 37);
+					.mr(5);
+					.mb(6);
+					.bc(@dark);
+					.pc;
+					opacity: .7;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+			&:hover {
+				.hb-child-1 {
+					display: none;
+				}
+				.hb-child-2 {
+					.brand-list {
+						.db;
+					}
+					a.more {
+						.bc(@tran);
+						color: @white;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Phone

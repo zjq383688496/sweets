@@ -71,6 +71,7 @@
 	}
 	.nl-btn {
 		.mt(10);
+		.oh;
 		a {
 			.db;
 			.th(24);
@@ -100,6 +101,40 @@
 				.ml(6);
 				.bp(0 -230px);
 			}
+		}
+	}
+}
+
+// Pad
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+	.news-list {
+		.nl-ul {
+			.h(465);
+			li {
+				.posr;
+				.h(130);
+			}
+			.img {
+				.posa;
+				left: 0;
+				.h(130);
+			}
+			.info {
+				width: auto;
+				.pl(180);
+			}
+		}
+	}
+	.st-right {
+		&:before {
+			content: '';
+			.db;
+			.wh(100%; 60);
+			background: url(../image/logo_opacity.png) 90% center @grayE no-repeat;
+			background-size: 80px 80px;
+		}
+		&>div {
+			.p(0 15px 15px);
 		}
 	}
 }

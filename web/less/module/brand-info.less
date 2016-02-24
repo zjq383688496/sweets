@@ -5,7 +5,7 @@
 .brand-info {
 	.bi-top {
 		.wh(100%; 67);
-		.mt(28);
+		.pt(28);
 		.pb(14);
 		.borb(1px solid @grayB);
 		.logo {
@@ -99,6 +99,18 @@
 			background-position: -36px -159px;
 		}
 	}
+	.st-right {
+		.bc(@white);
+	}
+}
+
+// Pad
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+	.brand-info {
+		.bi-top {
+			.pt;
+		}
+	}
 }
 
 // Phone
@@ -107,7 +119,7 @@
 		.bc(@white);
 		.bi-top {
 			.wh(100%; 100);
-			.mt(0);
+			.pt(0);
 			.pb(0);
 			.bc(@grayE);
 			.borb(1px solid @grayB);

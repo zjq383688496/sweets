@@ -79,8 +79,10 @@ $(function () {
 		// 商品列表
 		products: function () {
 			var that = this.def;
+			var b = $('body');
 			that.itemWidth = $.browser.isMobile()? 60: 70;
-			that.maxItems  = $.browser.isMobile()? 4: 9;
+			that.maxItems  = b.hasClass('s-phone')? 4: 9;
+			that.maxItems  = b.hasClass('s-pad')? 6: that.maxItems;
 			that.move = $.browser.isMobile()? 0: 1;
 			return that;
 		}
@@ -106,11 +108,9 @@ $(function () {
 
 			this.$flexslider = $('.flexslider');
 
+			this.screen();
 			this.bindEvent();
 			this.plug_in.flexslider();
-		},
-		_init: function () {
-			
 		},
 		// 事件绑定
 		bindEvent: function () {
@@ -131,6 +131,10 @@ $(function () {
 			// 排序展开||隐藏
 			this.$sortBtn.bind('click', function () {
 				that.ui.show(that.$sortBox, '.sort-box');
+			});
+			// 屏幕类型
+			$(window).bind('resize', function () {
+				that.screen();
 			});
 		},
 		// UI展示
@@ -171,6 +175,17 @@ $(function () {
 					var options = typeof(fs_options[attr]) === 'function'? fs_options[attr](): '';
 					if (options && !(attr=='brands' && $.browser.isMobile())) dom.flexslider(options);
 				});
+			}
+		},
+		screen: function () {
+			var b = $('body');
+			var w = $(window).width();
+			if (w <= 480) {
+				b.attr('class', 's-phone');
+			} else if (w <= 1024 && w > 480) {
+				b.attr('class', 's-pad');
+			} else {
+				b.attr('class', 's-web');
 			}
 		}
 	}
