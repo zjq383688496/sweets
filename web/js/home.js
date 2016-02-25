@@ -65,15 +65,19 @@ $(function () {
 		// 首页底部
 		footer: function () {
 			var that = this.def;
+			var b = $('body');
 			that.itemWidth = 132;
 			that.maxItems  = 7;
+			that.maxItems  = b.hasClass('s-pad')? 5: 7;
 			return that;
 		},
 		// 品牌列表
 		brands: function () {
 			var that = this.def;
-			that.itemWidth = 184;
-			that.maxItems  = 5;
+			var b = $('body');
+			//that.itemWidth = 184;
+			that.itemWidth = b.hasClass('s-pad')? 160: 184;
+			that.maxItems  = b.hasClass('s-pad')? 4: 5;
 			return that;
 		},
 		// 商品列表
@@ -173,7 +177,7 @@ $(function () {
 					var dom     = $(e);
 					var attr    = dom.attr('data-options');
 					var options = typeof(fs_options[attr]) === 'function'? fs_options[attr](): '';
-					if (options && !(attr=='brands' && $.browser.isMobile())) dom.flexslider(options);
+					if (options && !(attr=='brands' && $('body').hasClass('s-phone'))) dom.flexslider(options);
 				});
 			}
 		},

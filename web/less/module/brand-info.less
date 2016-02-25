@@ -107,8 +107,70 @@
 // Pad
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
 	.brand-info {
+		.posr;
 		.bi-top {
-			.pt;
+			.p(10px 0);
+			.borb;
+			.bc(@gray-high);
+		}
+		.bi-text {
+			.h(200);
+		}
+		.bi-introduction,
+		.bi-product {
+			.pl(160);
+		}
+		.bi-product-bar {
+			.w(@layout);
+			.bc(@gray-high);
+			.list {
+				.w(90%);
+			}
+			.flex-viewport {
+			}
+			ul.slides {
+				li {
+					a {
+						.ma;
+					}
+					img {
+						.squ(100%);
+					}
+				}
+			}
+			.flex-direction-nav {
+
+			}
+			a.flex-prev,
+			a.flex-next {
+			}
+			a.flex-prev {
+				left: 10px;
+			}
+			a.flex-next {
+				right: 10px;
+			}
+		}
+		.st-left {
+			.posa;
+			top: 87px;
+			bottom: 0;
+			left: 0;
+			.w(145);
+			height: auto;
+			.bp(45px 156px);
+			background-size: 90%;
+			i {
+				.db;
+				.squ(100%);
+				background-position: center;
+				background-size: cover;
+			}
+		}
+		.st-right {
+			&>div {
+				.p(0 0 10px);
+			}
 		}
 	}
 }

@@ -24,9 +24,9 @@
 			a.img {
 				.whb(176; 292);
 				.bc(@white);
-				img {
-					.squ(100%);
-				}
+				.bp(center);
+				background-size: cover;
+				background-repeat: no-repeat;
 			}
 			.info {
 				.h(155);
@@ -84,6 +84,29 @@
 	a.flex-next {
 		right: -35px;
 		background-position: 0 -160px;
+	}
+}
+
+// Pad
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+	.brand-list {
+		.w(92%);
+		ul.slides {
+		.whb(@layout; 450);
+		li {
+			.fl;
+			.db;
+			.whb(176; 450);
+			.p(0 4px);
+			a.img {
+				.whb(100%; 292);
+				.bc(@white);
+				img {
+					.squ(100%);
+				}
+			}
+		}
+	}
 	}
 }
 
